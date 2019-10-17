@@ -1,10 +1,10 @@
 import React from 'react';
 import {Text, View} from 'react-native';
 
-export const SettingsScreen = () => {
+export const MenuTabScreen = () => {
   return (
     <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <Text>SettingsScreen!</Text>
+      <Text>MenuTabScreen!</Text>
     </View>
   );
 };

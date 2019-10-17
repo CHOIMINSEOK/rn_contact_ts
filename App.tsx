@@ -1,13 +1,17 @@
-import React from 'react';
-import {Text, View} from 'react-native';
 import {createAppContainer} from 'react-navigation';
 import {createBottomTabNavigator} from 'react-navigation-tabs';
-import {ContactlistScreen} from './view/ContactListScreen';
-import {SettingsScreen} from './view/SettingsScreen';
+import {MindingTodayScreen} from './src/view/MindingTodayTabScreen';
+import {MissionTabScreen} from './src/view/MissionTabScreen';
+import {FeedbackTabScreen} from './src/view/FeedbackTabScreen';
+import {ReportTabScreen} from './src/view/ReportTabScreen';
+import {MenuTabScreen} from './src/view/MenuTabScreen';
 
 const TabNavigator = createBottomTabNavigator({
-  ContactList: ContactlistScreen,
-  Settings: SettingsScreen,
+  Today: MindingTodayScreen,
+  Mission: MissionTabScreen,
+  Feedback: FeedbackTabScreen,
+  Report: ReportTabScreen,
+  Menu: MenuTabScreen,
 });
 
 export default createAppContainer(TabNavigator);
