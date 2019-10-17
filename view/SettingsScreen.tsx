@@ -1,6 +1,6 @@
 import {Text, View} from 'react-native';
 
-const SettingsScreen = () => {
+export const SettingsScreen = () => {
   return (
     <View>
       <Text>SettingsScreen</Text>

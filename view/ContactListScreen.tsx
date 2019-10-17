@@ -1,7 +1,7 @@
 import React from 'react';
 import {Text, View} from 'react-native';
 
-const ContactlistScreen = () => {
+export const ContactlistScreen = () => {
   return (
     <View>
       <Text>ContactlistScreen</Text>
