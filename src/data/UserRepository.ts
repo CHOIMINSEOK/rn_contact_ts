@@ -1,11 +1,17 @@
 import EmployeeRepositoryInterface from '../domain/UserRepositoryInterface';
 
-import {fetchUsers} from './remote/UserService';
+import {BehaviorSubject, Observable} from 'rxjs';
+import {fetchUsersFromServer} from './remote/UserService';
 import User from '../domain/User';
 
 export default class UserRepository implements EmployeeRepositoryInterface {
-  public async getUsers(): Promise<Array<User>> {
-    // 상세 구현 필요
-    return fetchUsers();
+  private usersSubject: BehaviorSubject<Array<User>> = new BehaviorSubject([]);
+
+  observeUsers(): Observable<Array<User>> {
+    return this.usersSubject;
+  }
+
+  fetchUsers(): void {
+    fetchUsersFromServer().then(users => this.usersSubject.next(users));
   }
 }
